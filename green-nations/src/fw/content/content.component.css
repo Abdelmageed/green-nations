@@ -1,0 +1,5 @@
+:host {
+    display: flex;
+    background-color: #F0fff0;
+    flex-grow: 1;
+}

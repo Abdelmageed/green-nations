@@ -1,0 +1,23 @@
+{
+  "name": "green-nations",
+  "version": "1.0.0",
+  "description": "Plurasight Course Building a Responsive SPA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdelmageed/green-nations.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdelmageed/green-nations/issues"
+  },
+  "homepage": "https://github.com/Abdelmageed/green-nations#readme",
+  "devDependencies": {
+    "@angular/cli": "^1.2.1"
+  }
+}
