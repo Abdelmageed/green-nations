@@ -1,0 +1,14 @@
+<a *ngFor="let icon of socialIcons"
+  [href]="icon.link"
+  [title]="icon.alt">
+  <img [src]="icon.imageFile" [alt]="icon.alt" class="top-image">
+</a>
+
+<div *ngIf="showLanguageSelector">
+  <img src="assets/barbados-flag-bw.png" alt="flag" class="flag-image">
+  <span>BAJAN</span><span class="glyphicon glyphicon-chevron-down"></span>
+</div>
+
+<div *ngIf="showUserControls">
+  <span>SIGN IN</span>
+</div>
