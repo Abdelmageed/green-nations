@@ -19,5 +19,6 @@
   "homepage": "https://github.com/Abdelmageed/green-nations#readme",
   "devDependencies": {
     "@angular/cli": "^1.2.1"
-  }
+  },
+  "dependencies": {}
 }

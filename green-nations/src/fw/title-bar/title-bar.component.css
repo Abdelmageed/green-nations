@@ -14,3 +14,27 @@
     flex-grow: 1;
     padding-right: 20px;
 }
+
+.title-bar-small {
+    flex-grow: 1;
+    display: flex;
+    min-height: 56px;
+}
+
+.small-image-holder {
+    flex-grow: 1;
+}
+
+.menu-button {
+    margin-right: auto;
+}
+
+.small-image {
+    height: 50px;
+}
+
+span {
+    margin: 0 20px 0 10px;
+    font-size: 25px;
+    line-height: 50px;
+}
