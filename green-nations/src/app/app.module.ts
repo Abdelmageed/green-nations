@@ -1,16 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { FwModule } from "../fw/fw.module";
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CountriesComponent } from './countries/countries.component';
+import { SettingsComponent } from './settings/settings.component';
+import { appRoutes } from './app.routing';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    CountriesComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
-    FwModule
+    FwModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
