@@ -1,8 +1,15 @@
 <div class="menu-item"
-      [routerLink]="item.route"
-      routerLinkActive="router-link-active"
-      [ngClass]="{'vertical-menu': menuService.isVertical}"
+      [ngClass]="{'vertical-menu': menuService.isVertical,'router-link-active': isActiveRoute}"
       (click)="menuService.closeLeftSideMenu()">
   <span class="glyphicon {{ item.icon }}"></span>
   <span>{{ item.text | uppercase }}</span>
 </div>
+<fw-popup-menu
+        *ngIf="mouseInPopup || mouseInItem"
+        [menu]="item.subMenu"
+        (mouseleave)="onPopupMouseLeave($event)"
+        (mouseEnter)="onPopupMouseEnter($event)"
+        [style.left.px]="popupLeft"
+        [style.top.px]="popupTop"
+        >
+</fw-popup-menu>

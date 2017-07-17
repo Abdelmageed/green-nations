@@ -9,6 +9,7 @@ import { TopBarComponent } from './top-bar/top-bar.component'
 import { StatusBarComponent } from "./status-bar/status-bar.component";
 import { MenuComponent } from "./menus/menu/menu.component";
 import { MenuItemComponent } from "./menus/menu-item/menu-item.component";
+import { PopupMenuComponent } from "./menus/popup-menu/popup-menu.component";
 
 import { FrameworkConfigService } from "./services/framework-config.service";
 import { ScreenService } from "./services/screen.service";
@@ -31,7 +32,8 @@ import { ScreenBelowLargeDirective } from "./directives/screen-below-large.direc
     ScreenLargeDirective,
     ScreenBelowLargeDirective,
     MenuComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    PopupMenuComponent
   ],
   exports: [
     FrameworkBodyComponent
