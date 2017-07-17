@@ -1,8 +1,14 @@
 <div class="menu-item"
-      [ngClass]="{'vertical-menu': menuService.isVertical,'router-link-active': isActiveRoute}"
-      (click)="menuService.closeLeftSideMenu()">
+      [ngClass]="{'vertical-menu': menuService.isVertical,'router-link-active': isActiveRoute}">
   <span class="glyphicon {{ item.icon }}"></span>
   <span>{{ item.text | uppercase }}</span>
+
+  <span *ngIf="item.subMenu && !parentIsPopup && !menuService.isVertical"
+        class="glyphicon glyphicon-menu-down"></span>
+  <span class="glyphicon glyphicon-menu-right"
+        *ngIf="item.subMenu && parentIsPopup && !menuService.isVertical"></span>
+        <!-- vertical menus are buggy skipping arrows for them -->
+
 </div>
 <fw-popup-menu
         *ngIf="mouseInPopup || mouseInItem"
@@ -11,5 +17,6 @@
         (mouseEnter)="onPopupMouseEnter($event)"
         [style.left.px]="popupLeft"
         [style.top.px]="popupTop"
+        @visibilityChanged
         >
 </fw-popup-menu>

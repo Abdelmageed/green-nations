@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, HostBinding, HostListener, ElementRef, Renderer } from '@angular/core';
+import { Component, OnInit, Input, HostBinding, HostListener, ElementRef, Renderer, 
+  trigger, transition, animate, style } from '@angular/core';
 import { MenuItem } from "../menu-item";
 import { MenuService } from "../../services/menu.service";
 import { Router, NavigationEnd } from "@angular/router";
@@ -6,7 +7,18 @@ import { Router, NavigationEnd } from "@angular/router";
 @Component({
   selector: 'fw-menu-item',
   templateUrl: './menu-item.component.html',
-  styleUrls: ['./menu-item.component.css']
+  styleUrls: ['./menu-item.component.css'],
+  animations: [
+    trigger('visibilityChanged', [
+      transition(':enter', [
+        style({opacity: 0}),
+        animate(250, style({opacity: 1}))
+      ]),
+      transition(':leave', [
+        animate(100, style({opacity: 0}))
+      ])
+    ])
+  ]
 })
 export class MenuItemComponent implements OnInit {
 
