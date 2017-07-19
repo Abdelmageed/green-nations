@@ -12,10 +12,8 @@ export class AuthGaurd implements CanActivate, CanActivateChild{
     ) {}
 
     canActivate (): boolean {
-        console.log('Auth Gaurd called', this.userService.isAuthenticated);
 
         if (!this.userService.isAuthenticated) {
-            console.log('redirecting unauthenticated user');
             this.router.navigate(['sign-in']);
         }
         return this.userService.isAuthenticated;

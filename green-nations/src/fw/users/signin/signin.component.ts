@@ -25,18 +25,15 @@ export class SigninComponent implements OnInit {
 
     if (!signinForm.valid) { return; }
 
-    console.log('submitting...',  signinForm);
 
     this.submitting = true;
     this.formError = null;
 
     this.userApi.signIn(signinForm.value.username, signinForm.value.password, signinForm.value.rememberMe)
       .subscribe(data => {
-        console.log('signin valid', data);
         this.router.navigate(['/authenticated']);
       }, error => {
         this.submitting = false;
-        console.log('signin invalid', error);
         this.formError = error;
       });
   }

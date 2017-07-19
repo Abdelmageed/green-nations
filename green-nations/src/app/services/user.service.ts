@@ -11,9 +11,8 @@ export class UserService implements UserApi{
     constructor(private router: Router) {}
 
     signIn(username: string, password: string, rememberMe: boolean) {
-        console.log('user signin: username ' + username + ' password: ' + password + ' rememberMe: ' + rememberMe);
         this.isAuthenticated = true;
-        return Observable.of({}).delay(2000);
+        return Observable.of({});
         // return Observable.of({})
             // .delay(2000)
             // .flatMap(o => Observable.throw('Wrong Username or Password'));

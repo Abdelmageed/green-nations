@@ -16,6 +16,7 @@ import { AuthenticatedUserComponent } from './authenticated-user/authenticated-u
 import { UserService } from "./services/user.service";
 import { UserApi } from "../fw/users/user-api";
 import { AuthGaurd } from "./services/auth-gaurd.service";
+import { AppDataService } from "./services/app-data.service";
 
 @NgModule({
   declarations: [
@@ -34,9 +35,10 @@ import { AuthGaurd } from "./services/auth-gaurd.service";
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
+    AppDataService,
     UserService,
     {provide: UserApi, useExisting: UserService},
-    AuthGaurd
+    AuthGaurd,
   ],
   bootstrap: [AppComponent]
 })
