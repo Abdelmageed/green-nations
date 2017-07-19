@@ -31,3 +31,7 @@ span.glyphicon {
     margin-left: 4px;
     font-size: 11px;
 }
+
+.sign-out-link {
+    cursor: pointer;
+}

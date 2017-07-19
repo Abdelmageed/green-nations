@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { FrameworkBodyComponent } from './framework-body/framework-body.component';
 import { ContentComponent } from "./content/content.component";
@@ -11,6 +12,8 @@ import { StatusBarComponent } from "./status-bar/status-bar.component";
 import { MenuComponent } from "./menus/menu/menu.component";
 import { MenuItemComponent } from "./menus/menu-item/menu-item.component";
 import { PopupMenuComponent } from "./menus/popup-menu/popup-menu.component";
+import { SigninComponent } from "./users/signin/signin.component";
+import { RegisterUserComponent } from "./users/register-user/register-user.component";
 
 import { FrameworkConfigService } from "./services/framework-config.service";
 import { ScreenService } from "./services/screen.service";
@@ -23,7 +26,8 @@ import { ScreenBelowLargeDirective } from "./directives/screen-below-large.direc
   imports: [
     CommonModule,
     RouterModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   declarations: [ 
     FrameworkBodyComponent,
@@ -35,7 +39,9 @@ import { ScreenBelowLargeDirective } from "./directives/screen-below-large.direc
     ScreenBelowLargeDirective,
     MenuComponent,
     MenuItemComponent,
-    PopupMenuComponent
+    PopupMenuComponent,
+    SigninComponent,
+    RegisterUserComponent
   ],
   exports: [
     FrameworkBodyComponent
