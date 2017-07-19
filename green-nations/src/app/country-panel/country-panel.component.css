@@ -1,0 +1,41 @@
+:host{
+    flex-grow: 1;
+}
+
+
+
+.group {
+    display: flex;
+}
+
+.index {
+    width: 80px;
+    background-color: #555;
+    color: white;
+    font-size: 32px;
+   
+}
+
+.country-image {
+    width: 240px;
+    height: 120px;
+}
+
+.country-name {
+    color: #555;
+    font-size: 32px;
+    flex-grow: 1;
+}
+
+.epi-index {
+    font-size: 44px;
+    width: 180px;
+    color: white;
+    background-color: green;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}

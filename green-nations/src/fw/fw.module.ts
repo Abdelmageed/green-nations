@@ -16,6 +16,7 @@ import { SigninComponent } from "./users/signin/signin.component";
 import { RegisterUserComponent } from "./users/register-user/register-user.component";
 import { DynamicFormComponent } from "./dynamic-forms/dynamic-form/dynamic-form.component";
 import { DynamicFieldComponent } from "./dynamic-field/dynamic-field.component";
+import { PanelComponent } from "./panels/panel/panel.component";
 
 import { FrameworkConfigService } from "./services/framework-config.service";
 import { ScreenService } from "./services/screen.service";
@@ -46,11 +47,13 @@ import { ScreenBelowLargeDirective } from "./directives/screen-below-large.direc
     SigninComponent,
     RegisterUserComponent,
     DynamicFormComponent,
-    DynamicFieldComponent
+    DynamicFieldComponent,
+    PanelComponent
   ],
   exports: [
     FrameworkBodyComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    PanelComponent
   ],
   providers: [
     FrameworkConfigService,

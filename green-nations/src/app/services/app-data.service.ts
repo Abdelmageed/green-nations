@@ -27,6 +27,13 @@ export class AppDataService {
       return Observable.of(this.countries);
   }
 
+   getCountriesSlice(count: number): Observable<Country[]> {
+        if (count == 0) {
+            return Observable.of(this.countries);
+        }
+        return Observable.of(this.countries.slice(0, count));
+  }
+
   getCountry(id: number): Observable<Country> {
       let country = this.countries.find(c => c.id == id);
       return Observable.of(country);
