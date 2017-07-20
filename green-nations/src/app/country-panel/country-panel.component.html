@@ -1,4 +1,4 @@
-<div class="group">
+<div *screenLarge class="group">
   <div class="index centered">
     <span>{{index + 1}}</span>
   </div>
@@ -11,4 +11,20 @@
    <div class="epi-index centered">
     <span>{{country.epiIndex}}</span>
   </div> 
+</div>
+
+<div *screenBelowLarge class="group-small">
+  <div class="title-group-small">
+    <div class="index-small">
+      <span>{{index}}</span>
+    </div>
+    <div class="country-name-small">
+      <span>{{country.name}}</span>
+    </div>
+  </div>
+  <img [src]="'/assets/' + country.name + '.jpg'" [alt]="'country.name' + image" class="country-image-small">
+
+  <div class="epi-index-small">
+    <span>{{country.epiIndex}}</span>
+  </div>
 </div>

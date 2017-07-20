@@ -39,3 +39,24 @@
     align-items: center;
     justify-content: center;  
 }
+
+.group-small {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-group-small {
+    display: flex;
+}
+
+.index-small {
+    width: 50px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    font-size: 32px;
+}
+
+.country-image-small {
+    width: 100%;
+}

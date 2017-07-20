@@ -53,7 +53,9 @@ import { ScreenBelowLargeDirective } from "./directives/screen-below-large.direc
   exports: [
     FrameworkBodyComponent,
     DynamicFormComponent,
-    PanelComponent
+    PanelComponent,
+    ScreenLargeDirective,
+    ScreenBelowLargeDirective
   ],
   providers: [
     FrameworkConfigService,

@@ -18,6 +18,7 @@ import { UserApi } from "../fw/users/user-api";
 import { AuthGaurd } from "./services/auth-gaurd.service";
 import { AppDataService } from "./services/app-data.service";
 import { CountryPanelComponent } from './country-panel/country-panel.component';
+import { ImagePanelComponent } from './image-panel/image-panel.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CountryPanelComponent } from './country-panel/country-panel.component';
     CountryListComponent,
     CountryMaintComponent,
     AuthenticatedUserComponent,
-    CountryPanelComponent
+    CountryPanelComponent,
+    ImagePanelComponent
   ],
   imports: [
     BrowserModule,
